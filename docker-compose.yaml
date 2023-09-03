@@ -1,0 +1,14 @@
+version: "3.3"
+services:
+  pdf_qa:
+    image: pdf_qa:latest
+    container_name: pdf_qa
+    hostname: pdf_qa
+    ports:
+      - "8502:8502"
+    networks:
+      - my-network
+    restart: unless-stopped
+networks:
+  my-network:
+    driver: bridge
